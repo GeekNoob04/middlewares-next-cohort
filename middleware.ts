@@ -9,7 +9,7 @@ import { NextRequest, NextResponse } from "next/server";
 // }
 
 export function middleware(req: NextRequest) {
-    console.log(req.nextUrl.pathname);
+    // console.log(req.nextUrl.pathname);
     if (req.nextUrl.pathname.startsWith("/admin")) {
         return NextResponse.redirect(new URL("/signin", req.url));
     }
